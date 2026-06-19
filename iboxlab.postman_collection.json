@@ -1,0 +1,143 @@
+{
+  "info": {
+    "_postman_id": "f54a8da9-daf4-4522-83ea-0be6680314a3",
+    "name": "iboxlab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7916361",
+    "_collection_link": "https://go.postman.co/collection/7916361-f54a8da9-daf4-4522-83ea-0be6680314a3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Search Flight",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/flights/search?from=DAC&to=DXB&date=2026-07-01&passengers=2&sort=price",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "flights",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "from",
+              "value": "DAC"
+            },
+            {
+              "key": "to",
+              "value": "DXB"
+            },
+            {
+              "key": "date",
+              "value": "2026-07-01"
+            },
+            {
+              "key": "passengers",
+              "value": "2"
+            },
+            {
+              "key": "sort",
+              "value": "price"
+            },
+            {
+              "key": "order",
+              "value": "asc",
+              "disabled": true
+            },
+            {
+              "key": "provider",
+              "value": "provider-b",
+              "disabled": true
+            },
+            {
+              "key": "carrier",
+              "value": "EK",
+              "disabled": true
+            },
+            {
+              "key": "max_stops",
+              "value": "0",
+              "disabled": true
+            },
+            {
+              "key": "min_price",
+              "value": "100",
+              "disabled": true
+            },
+            {
+              "key": "max_price",
+              "value": "500",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Store Booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"flight_id\": \"flt_2e110b9dee20\",\r\n    \"passengers\": [\r\n        {\r\n            \"name\": \"Abdul Mabud\",\r\n            \"email\": \"mabud@example.com\",\r\n            \"phone\": \"01700000000\"\r\n        },\r\n        {\r\n            \"name\": \"Test User\",\r\n            \"email\": \"test@example.com\",\r\n            \"phone\": \"01400000000\"\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/bookings",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve  Booking",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/bookings/BK-ZEK53ZVS",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            "BK-ZEK53ZVS"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
